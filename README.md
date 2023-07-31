@@ -132,9 +132,9 @@ To replace:
 
 ### Dependencies
 
-- `sudo apt update
-  - sudo apt-get install python3-scipy ffmpeg python3-pyaudio vim git python3-pip
-  - sudo apt full-upgrade -y && sudo apt autoremove -y
+- `sudo apt update`
+- `sudo apt-get install python3-scipy ffmpeg python3-pyaudio vim git python3-pip`
+- `sudo apt full-upgrade -y && sudo apt autoremove -y`
 
 - `pip3 install -r requirements.txt` or pip install each manually:
   - [GPIOZero](https://gpiozero.readthedocs.io)
