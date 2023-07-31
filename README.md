@@ -1,3 +1,5 @@
+# Thanks to nickpourazima for his work and initial creation of the code
+
 # Rotary Phone Audio Guestbook
 
 - [Rotary Phone Audio Guestbook](#rotary-phone-audio-guestbook)
