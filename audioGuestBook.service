@@ -6,6 +6,6 @@ WorkingDirectory=/home/<username>/Desktop/rotaryGuestBook
 User=<username>
 Type=simple
 Restart=always
-ExecStart=/usr/bin/env python3 /home/<username>/Desktop/rotaryGuestBook/rotaryGuestBook.py
+ExecStart=/usr/bin/env python3 /home/<username>/Desktop/rotaryGuestBook/audioGuestBook.py
 [Install]
 WantedBy=multi-user.target
