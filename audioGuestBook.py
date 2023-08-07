@@ -55,13 +55,22 @@ def off_hook() -> None:
     print("recording")
     audio_interface.record()
     audio_interface.stop()
+    cur_dt = datetime.now().isoformat()
     output_file = (
         os.path.dirname(os.path.abspath(config["source_file"]))
         + "/recordings/"
-        + f"{datetime.now().isoformat()}"
+        + cur_dt
     )
     audio_interface.close(output_file + ".wav")
-    print("Finished recording!")
+    print("Finished recording")
+    recording = AudioSegment.from_file(output_file + ".wav")
+    recording.export(
+        output_file + ".mp3", format="mp3"
+    )
+    print("Converted to mp3")
+    os.remove(output_file + ".wav")
+    print("Removed original wav-file")
+    print("Finished!")
 
 
 def on_hook() -> None:
