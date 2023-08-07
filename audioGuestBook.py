@@ -10,6 +10,8 @@ from gpiozero import Button
 from signal import pause
 from pydub import AudioSegment
 from pydub.playback import play
+from random2 import choice
+from glob import glob
 
 try:
     with open("config.yaml") as f:
@@ -27,12 +29,15 @@ def off_hook() -> None:
     print("Phone off hook, ready to begin!")
     audio_interface = audioInterface.AudioInterface(config, hook)
 
+    # random voicemessage
+    random_voicemessage = choice(glob('*voicemessage*.wav'))
+    
     # playback voice message through speaker
     print("Playing voicemail message...")
     play(
         AudioSegment.from_wav(
             os.path.dirname(os.path.abspath(config["source_file"]))
-            + "/sounds/voicemail.wav"
+            + "/sounds/" + random_voicemessage
         )
         - config["playback_reduction"]
     )
