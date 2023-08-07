@@ -30,14 +30,14 @@ def off_hook() -> None:
     audio_interface = audioInterface.AudioInterface(config, hook)
 
     # random voicemessage
-    random_voicemessage = choice(glob('*voicemessage*.wav'))
+    random_voicemessage = choice(glob('sounds/*voicemessage*.wav'))
     
     # playback voice message through speaker
     print("Playing voicemail message...")
     play(
         AudioSegment.from_wav(
             os.path.dirname(os.path.abspath(config["source_file"]))
-            + "/sounds/" + random_voicemessage
+            + "/" + random_voicemessage
         )
         - config["playback_reduction"]
     )
