@@ -31,6 +31,7 @@ def off_hook() -> None:
 
     # random voicemessage
     random_voicemessage = choice(glob('sounds/*voicemessage*.wav'))
+    print("Selected" + random_voicemessage + "to play.")
     
     # playback voice message through speaker
     print("Playing voicemail message...")
