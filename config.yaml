@@ -4,6 +4,7 @@ buffer_size: 4096
 channels: 1
 hook_gpio: 25
 playback_reduction: 16
+playback_increase: 10
 recording_limit: 60
 rotary_gpio: 23
 rotary_hold_repeat: true
