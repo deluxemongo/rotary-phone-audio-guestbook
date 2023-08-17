@@ -65,6 +65,8 @@ I was inspired by the code of nickpourazima and decided to fork his project and 
   - [Pydub](http://pydub.com/)
   - [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/)
   - [PyYAML](https://pyyaml.org/)
+ 
+- Maybe you have to set your USB Audio Device as Default. This can be done by `sudo raspi-config` in the Interface Options
 
 ### [Config](config.yaml)
 
