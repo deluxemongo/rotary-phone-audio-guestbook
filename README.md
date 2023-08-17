@@ -74,7 +74,7 @@ I was inspired by the code of nickpourazima and decided to fork his project and 
 - The build-in speaker and mic of the Brondi phone have only one channel, if you replace one of them you maybe have to edit the mapping in the config file.
 
 - For GPIO mapping, refer to the wiring diagram specific to your rpi:
-  `gpio-pinout`
+  `pinout`
 
 ### [AudioInterface Class](audioInterface.py)
 
