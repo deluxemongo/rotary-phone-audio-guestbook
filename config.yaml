@@ -1,8 +1,8 @@
 alsa_hw_mapping: 1
 beep_reduction: 24
 buffer_size: 4096
-channels: 2
-hook_gpio: 22
+channels: 1
+hook_gpio: 25
 playback_reduction: 16
 recording_limit: 60
 rotary_gpio: 23
