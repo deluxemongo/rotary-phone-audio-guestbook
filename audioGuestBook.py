@@ -40,7 +40,8 @@ def off_hook() -> None:
             os.path.dirname(os.path.abspath(config["source_file"]))
             + "/" + random_voicemessage
         )
-        - config["playback_reduction"]
+        #- config["playback_reduction"]
+        + config["playback_increase"]
     )
 
     # start recording beep
@@ -49,7 +50,8 @@ def off_hook() -> None:
         AudioSegment.from_wav(
             os.path.dirname(os.path.abspath(config["source_file"])) + "/sounds/beep.wav"
         )
-        - config["beep_reduction"]
+        #- config["beep_reduction"]
+        + config["beep_increase"]
     )
 
     # now, while phone is off the hook, record audio from the microphone
