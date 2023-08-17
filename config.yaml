@@ -1,5 +1,6 @@
 alsa_hw_mapping: 1
 beep_reduction: 24
+beep_increase: 10
 buffer_size: 4096
 channels: 1
 hook_gpio: 25
