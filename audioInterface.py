@@ -39,6 +39,8 @@ class AudioInterface:
                     data = self.stream.read(self.chunk, exception_on_overflow=True)
                     self.frames.append(data)
                 else:
+                    # Notify the user that their recording time is up
+                    self.play("time_exceeded.wav")
                     break
         except KeyboardInterrupt:
             print("Done recording")
