@@ -71,8 +71,8 @@ def off_hook() -> None:
         output_file + ".mp3", format="mp3"
     )
     print("Converted to mp3")
-    os.remove(output_file + ".wav")
-    print("Removed original wav-file")
+    #os.remove(output_file + ".wav")
+    #print("Removed original wav-file")
     print("Finished!")
 
 
