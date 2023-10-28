@@ -40,7 +40,7 @@ class AudioInterface:
                     self.frames.append(data)
                 else:
                     # Notify the user that their recording time is up
-                    self.play("time_exceeded.wav")
+                    self.play("./sounds/time_exceeded.wav")
                     break
         except KeyboardInterrupt:
             print("Done recording")
