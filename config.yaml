@@ -3,6 +3,7 @@ beep_reduction: 24
 beep_increase: 10
 buffer_size: 4096
 channels: 1
+led_gpio: 14
 hook_gpio: 25
 playback_reduction: 16
 playback_increase: 10
