@@ -4,6 +4,7 @@ import audioInterface
 import os
 import yaml
 import sys
+import RPi.GPIO as GPIO
 
 from datetime import datetime
 from gpiozero import Button
@@ -23,9 +24,15 @@ except FileNotFoundError as e:
     sys.exit(1)
 
 hook = Button(config["hook_gpio"])
+led = config["led_gpio"]
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(led,GPIO.OUT)
 
 
 def off_hook() -> None:
+    GPIO.output(led,GPIO.LOW)
+    print("LED off")
     print("Phone off hook, ready to begin!")
     audio_interface = audioInterface.AudioInterface(config, hook)
 
@@ -77,6 +84,8 @@ def off_hook() -> None:
 
 
 def on_hook() -> None:
+    GPIO.output(led,GPIO.HIGH)
+    print("LED on")
     print("Phone on hook.\nSleeping...")
 
 
